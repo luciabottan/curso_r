@@ -1,0 +1,33 @@
+---
+title: "prueba"
+editor: visual
+format: 
+  docx: 
+    reference-doc: plantilla.docx
+---
+
+## Ejercicio
+
+Generar un documento Quarto que esté compuesto por almenos metadatos, código y texto. Se pueden añadir otros elementos.
+
+## Running Code
+
+When you click the **Render** [@DOI:10.4067/S0717-92002013000200002] \
+button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
+
+```{r code1}
+#| echo: FALSE 
+#| warning: FALSE
+
+
+library(ggplot2)
+
+library(readxl)
+datos <- read_excel("mis.datos.xlsx")
+ggplot(data = datos) + aes(x = cob.mono) + geom_density() + theme_classic()
+```
+
+```{r}
+#| echo: false
+2*100
+```
